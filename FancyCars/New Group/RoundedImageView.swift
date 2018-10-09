@@ -10,6 +10,10 @@ import UIKit
 
 class RoundedImageView: UIImageView {
 
-    
+    override func awakeFromNib() {
+        layer.cornerRadius = 10
+        layer.masksToBounds = true
+        
+    }
 
 }
