@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E144482F216BA8940054610C /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E144482E216BA8940054610C /* RoundedImageView.swift */; };
 		E1A82135216B94440087E04E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A82134216B94440087E04E /* AppDelegate.swift */; };
-		E1A82137216B94440087E04E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A82136216B94440087E04E /* ViewController.swift */; };
+		E1A82137216B94440087E04E /* MainListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A82136216B94440087E04E /* MainListVC.swift */; };
 		E1A8213A216B94440087E04E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1A82138216B94440087E04E /* Main.storyboard */; };
 		E1A8213C216B94450087E04E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1A8213B216B94450087E04E /* Assets.xcassets */; };
 		E1A8213F216B94450087E04E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1A8213D216B94450087E04E /* LaunchScreen.storyboard */; };
+		E1A82147216B95280087E04E /* data.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = E1A82146216B95280087E04E /* data.stringsdict */; };
+		E1A82149216B9E410087E04E /* DetailListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A82148216B9E410087E04E /* DetailListVC.swift */; };
+		E1AE8911216CBD34008E3D18 /* ItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AE8910216CBD34008E3D18 /* ItemViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E144482E216BA8940054610C /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		E1A82131216B94440087E04E /* FancyCars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FancyCars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A82134216B94440087E04E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E1A82136216B94440087E04E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E1A82136216B94440087E04E /* MainListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListVC.swift; sourceTree = "<group>"; };
 		E1A82139216B94440087E04E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1A8213B216B94450087E04E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1A8213E216B94450087E04E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1A82140216B94450087E04E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1A82146216B95280087E04E /* data.stringsdict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.stringsdict; path = data.stringsdict; sourceTree = "<group>"; };
+		E1A82148216B9E410087E04E /* DetailListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListVC.swift; sourceTree = "<group>"; };
+		E1AE8910216CBD34008E3D18 /* ItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +43,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E1444830216BA89F0054610C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E144482E216BA8940054610C /* RoundedImageView.swift */,
+			);
+			name = Views;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		E1A82128216B94440087E04E = {
 			isa = PBXGroup;
 			children = (
@@ -54,14 +71,34 @@
 		E1A82133216B94440087E04E /* FancyCars */ = {
 			isa = PBXGroup;
 			children = (
-				E1A82134216B94440087E04E /* AppDelegate.swift */,
-				E1A82136216B94440087E04E /* ViewController.swift */,
+				E1444830216BA89F0054610C /* Views */,
+				E1A8214A216BA4D60087E04E /* Controllers */,
 				E1A82138216B94440087E04E /* Main.storyboard */,
 				E1A8213B216B94450087E04E /* Assets.xcassets */,
 				E1A8213D216B94450087E04E /* LaunchScreen.storyboard */,
-				E1A82140216B94450087E04E /* Info.plist */,
+				E1A8214B216BA4ED0087E04E /* Supporting Files */,
 			);
 			path = FancyCars;
+			sourceTree = "<group>";
+		};
+		E1A8214A216BA4D60087E04E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E1A82136216B94440087E04E /* MainListVC.swift */,
+				E1A82148216B9E410087E04E /* DetailListVC.swift */,
+				E1AE8910216CBD34008E3D18 /* ItemViewCell.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E1A8214B216BA4ED0087E04E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1A82134216B94440087E04E /* AppDelegate.swift */,
+				E1A82146216B95280087E04E /* data.stringsdict */,
+				E1A82140216B94450087E04E /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +161,7 @@
 			files = (
 				E1A8213F216B94450087E04E /* LaunchScreen.storyboard in Resources */,
 				E1A8213C216B94450087E04E /* Assets.xcassets in Resources */,
+				E1A82147216B95280087E04E /* data.stringsdict in Resources */,
 				E1A8213A216B94440087E04E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +173,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1A82137216B94440087E04E /* ViewController.swift in Sources */,
+				E1AE8911216CBD34008E3D18 /* ItemViewCell.swift in Sources */,
+				E144482F216BA8940054610C /* RoundedImageView.swift in Sources */,
+				E1A82137216B94440087E04E /* MainListVC.swift in Sources */,
 				E1A82135216B94440087E04E /* AppDelegate.swift in Sources */,
+				E1A82149216B9E410087E04E /* DetailListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,12 +325,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MH99TMMZ5H;
-				INFOPLIST_FILE = FancyCars/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FancyCars/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = devcreatios.FancyCars;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devcreatios.FancyCars;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -302,12 +343,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MH99TMMZ5H;
-				INFOPLIST_FILE = FancyCars/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FancyCars/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = devcreatios.FancyCars;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devcreatios.FancyCars;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
