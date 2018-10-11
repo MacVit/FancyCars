@@ -18,9 +18,27 @@ class MainListVC: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         collectionListView.delegate = self
         collectionListView.dataSource = self
+        
+        if let dataPath = Bundle.main.path(forResource: "data", ofType: "plist"), let carsData = NSDictionary(contentsOfFile: dataPath) {
+            for(_ , value) in carsData {
+                
+                let arrList = value as! NSArray
+                
+//                arrList.forEach { (dict) in
+//                    print("\(dict["model"] as! String)")
+//                }
+                for items in arrList {
+                    let dictItems = items as! NSDictionary
+                    print(dictItems)
+                    for item in dictItems {
+                        print(item)
+                    }
+                }
+                
+            }
+            
+        }
     }
-
-
 }
 
 extension MainListVC: UICollectionViewDelegate {
