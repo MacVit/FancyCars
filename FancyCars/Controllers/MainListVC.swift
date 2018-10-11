@@ -13,7 +13,7 @@ class MainListVC: UIViewController {
     private let toDetailIdentifier: String = "toDetail"
     
     @IBOutlet weak var carImage: UIImageView!
-    
+    @IBOutlet weak var collectionListView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
