@@ -10,6 +10,8 @@ import UIKit
 
 class MainListVC: UIViewController {
 
+    private let toDetailIdentifier: String = "toDetail"
+    
     @IBOutlet weak var carImage: UIImageView!
     
     
@@ -56,12 +58,12 @@ extension MainListVC: UICollectionViewDataSource {
     }
    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "toDetail", for: indexPath) as! ItemViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: toDetailIdentifier, for: indexPath) as! ItemViewCell
         
         return cell
     }
