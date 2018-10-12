@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dAZ-Da-adk">
-                                <rect key="frame" x="0.0" y="288" width="375" height="330"/>
+                                <rect key="frame" x="0.0" y="298" width="375" height="320"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jTv-H2-Qyd">
                                     <size key="itemSize" width="369" height="153"/>
@@ -137,7 +137,7 @@
                             <constraint firstItem="dAZ-Da-adk" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="PJk-cO-1PO"/>
                             <constraint firstItem="vEw-yP-trt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bsA-nc-tlb"/>
                             <constraint firstItem="dAZ-Da-adk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dxh-gV-k4C"/>
-                            <constraint firstItem="dAZ-Da-adk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="224" id="uvf-AZ-f5x"/>
+                            <constraint firstItem="dAZ-Da-adk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="234" id="uvf-AZ-f5x"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

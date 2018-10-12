@@ -8,12 +8,28 @@
 
 import UIKit
 
+@IBDesignable
 class RoundedImageView: UIImageView {
 
     override func awakeFromNib() {
-        layer.cornerRadius = 10
+        super.awakeFromNib()
+        layoutIfNeeded()
+        layer.cornerRadius = 25
         layer.masksToBounds = true
-        
+
     }
 
+//    @IBInspectable var cornerRadius: CGFloat {
+//        get {
+//            layoutIfNeeded()
+//            return layer.cornerRadius
+//
+//        }
+//        set(newRadius) {
+//            layer.cornerRadius = newRadius
+//            layer.masksToBounds = true
+//            layer.masksToBounds = newRadius > 0
+//        }
+//    }
+    
 }
