@@ -40,36 +40,24 @@ class MainListVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         collectionListView.delegate = self
         collectionListView.dataSource = self
         
-        if let dataPath = Bundle.main.path(forResource: "data", ofType: "plist"), let carsData = NSDictionary(contentsOfFile: dataPath) {
-            for(_ , value) in carsData {
-                
-                let arrList = value as! NSArray
-                
-//                arrList.forEach { (dict) in
-//                    print("\(dict["model"] as! String)")
-//                }
-                for items in arrList {
-                    let dictItems = items as! NSDictionary
-                    print(dictItems)
-                    for item in dictItems {
-                        print(item)
-                    }
-                }
-                
-            }
-            
-        }
+        carsModels = parseCarModel()
+        
     }
 }
 
 extension MainListVC: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        if let modelImage = carsModels?[indexPath.item] {
+            
+            UIView.transition(with: carImage, duration: 1, options: .transitionCrossDissolve, animations: {
+                self.carImage.image = UIImage.init(imageLiteralResourceName: modelImage.id)
+            }, completion: nil)
+        }
     }
     
 }
@@ -79,7 +67,7 @@ extension MainListVC: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-   
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
@@ -87,6 +75,16 @@ extension MainListVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: toDetailIdentifier, for: indexPath) as! ItemViewCell
+        let index: Int = indexPath.item
+        
+        if let model = carsModels?[index] {
+            cell.companyLbl.text = model.company
+            cell.modelLbl.text = model.model
+            cell.colorLbl.text = model.color
+            cell.yearLbl.text = model.year
+            cell.imageOfTheCar.image = UIImage.init(imageLiteralResourceName: model.id)
+        }
+
         
         return cell
     }
