@@ -17,7 +17,7 @@
 		E1AE8911216CBD34008E3D18 /* ItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AE8910216CBD34008E3D18 /* ItemViewCell.swift */; };
 		E1BF7F20216E30B600498A87 /* Shadow+RoundedCorners Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF7F1F216E30B600498A87 /* Shadow+RoundedCorners Extension.swift */; };
 		E1BF7F23216E4C7A00498A87 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1BF7F22216E4C7A00498A87 /* data.plist */; };
-		E1E12E37216CE39300D85B72 /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E12E36216CE39300D85B72 /* CarModel.swift */; };
+		E1E12E37216CE39300D85B72 /* CarModelDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E12E36216CE39300D85B72 /* CarModelDescription.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,7 @@
 		E1AE8910216CBD34008E3D18 /* ItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewCell.swift; sourceTree = "<group>"; };
 		E1BF7F1F216E30B600498A87 /* Shadow+RoundedCorners Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shadow+RoundedCorners Extension.swift"; sourceTree = "<group>"; };
 		E1BF7F22216E4C7A00498A87 /* data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
-		E1E12E36216CE39300D85B72 /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
+		E1E12E36216CE39300D85B72 /* CarModelDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModelDescription.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +118,7 @@
 		E1E12E38216CE43F00D85B72 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E1E12E36216CE39300D85B72 /* CarModel.swift */,
+				E1E12E36216CE39300D85B72 /* CarModelDescription.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -198,7 +198,7 @@
 				E1AE8911216CBD34008E3D18 /* ItemViewCell.swift in Sources */,
 				E1BF7F20216E30B600498A87 /* Shadow+RoundedCorners Extension.swift in Sources */,
 				E144482F216BA8940054610C /* RoundedImageView.swift in Sources */,
-				E1E12E37216CE39300D85B72 /* CarModel.swift in Sources */,
+				E1E12E37216CE39300D85B72 /* CarModelDescription.swift in Sources */,
 				E1A82137216B94440087E04E /* MainListVC.swift in Sources */,
 				E1A82135216B94440087E04E /* AppDelegate.swift in Sources */,
 				E1A82149216B9E410087E04E /* DetailListVC.swift in Sources */,

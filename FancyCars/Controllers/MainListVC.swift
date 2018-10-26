@@ -19,6 +19,25 @@ class MainListVC: UIViewController {
     @IBOutlet weak var carImage: UIImageView!
     @IBOutlet weak var collectionListView: UICollectionView!
     
+    
+    func parseCarModel() -> CarsModelDescription? {
+        let url: URL = Bundle.main.url(forResource: "data", withExtension: "plist")!
+        do {
+            let data = try Data(contentsOf: url)
+            let decoder = PropertyListDecoder()
+            let result = try decoder.decode(CarsModelDescription.self, from: data)
+            
+            return result.shuffled()
+        } catch {
+            print(error.localizedDescription)
+            return nil
+        }
+        
+    }
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
