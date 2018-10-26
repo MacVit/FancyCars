@@ -9,8 +9,12 @@
 import UIKit
 
 class MainListVC: UIViewController {
-
+    
+    typealias CarsModelDescription = [CarModelDescription]
+    
     private let toDetailIdentifier: String = "toDetail"
+    
+    var carsModels: CarsModelDescription?
     
     @IBOutlet weak var carImage: UIImageView!
     @IBOutlet weak var collectionListView: UICollectionView!
