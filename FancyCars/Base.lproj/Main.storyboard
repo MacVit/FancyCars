@@ -21,27 +21,27 @@
                                 <rect key="frame" x="0.0" y="298" width="375" height="320"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jTv-H2-Qyd">
-                                    <size key="itemSize" width="369" height="153"/>
+                                    <size key="itemSize" width="369" height="137"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="toDetail" id="VxP-cs-VjZ" customClass="ItemViewCell" customModule="FancyCars" customModuleProvider="target">
-                                        <rect key="frame" x="3" y="0.0" width="369" height="153"/>
+                                        <rect key="frame" x="3" y="0.0" width="369" height="137"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="369" height="153"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="369" height="137"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CO0-EL-3zL" userLabel="Content View">
-                                                    <rect key="frame" x="0.0" y="0.0" width="369" height="153"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="369" height="137"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="clV-qd-T3D">
-                                                            <rect key="frame" x="8" y="38" width="353" height="102"/>
+                                                        <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="clV-qd-T3D">
+                                                            <rect key="frame" x="5" y="5" width="369" height="127"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tesla-Roadster-2-2" translatesAutoresizingMaskIntoConstraints="NO" id="hpK-eN-3XB" customClass="RoundedImageView" customModule="FancyCars" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="171.5" height="102"/>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="hpK-eN-3XB" customClass="RoundedImageView" customModule="FancyCars" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="179.5" height="127"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                             <real key="value" value="20"/>
@@ -49,19 +49,19 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </imageView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="qCV-wG-Dlv">
-                                                                    <rect key="frame" x="181.5" y="12.5" width="171.5" height="77"/>
+                                                                    <rect key="frame" x="189.5" y="25" width="179.5" height="77"/>
                                                                     <subviews>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="VqZ-Cp-WZD">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="171.5" height="23.5"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="179.5" height="23.5"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Company" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="4yG-Xn-OUJ">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="92" height="23.5"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="96.5" height="23.5"/>
                                                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Model" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="wVn-4f-Y5b">
-                                                                                    <rect key="frame" x="107" y="0.0" width="64.5" height="23.5"/>
+                                                                                    <rect key="frame" x="111.5" y="0.0" width="68" height="23.5"/>
                                                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
@@ -69,16 +69,16 @@
                                                                             </subviews>
                                                                         </stackView>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="XZT-BV-dRF">
-                                                                            <rect key="frame" x="0.0" y="53.5" width="171.5" height="23.5"/>
+                                                                            <rect key="frame" x="0.0" y="53.5" width="179.5" height="23.5"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Color" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNs-d1-it2">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="80.5" height="23.5"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="84.5" height="23.5"/>
                                                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nqb-it-LbU">
-                                                                                    <rect key="frame" x="95.5" y="0.0" width="76" height="23.5"/>
+                                                                                    <rect key="frame" x="99.5" y="0.0" width="80" height="23.5"/>
                                                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
@@ -92,10 +92,10 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="clV-qd-T3D" firstAttribute="leading" secondItem="CO0-EL-3zL" secondAttribute="leadingMargin" id="6wK-Er-2p8"/>
-                                                        <constraint firstAttribute="bottomMargin" secondItem="clV-qd-T3D" secondAttribute="bottom" constant="5" id="AjI-jR-b8o"/>
-                                                        <constraint firstItem="clV-qd-T3D" firstAttribute="top" secondItem="CO0-EL-3zL" secondAttribute="topMargin" constant="10" id="L82-DT-6cV"/>
-                                                        <constraint firstItem="clV-qd-T3D" firstAttribute="centerX" secondItem="CO0-EL-3zL" secondAttribute="centerX" id="uLN-CC-IBo"/>
+                                                        <constraint firstAttribute="bottom" secondItem="clV-qd-T3D" secondAttribute="bottom" constant="5" id="84g-DO-Bju"/>
+                                                        <constraint firstItem="clV-qd-T3D" firstAttribute="leading" secondItem="CO0-EL-3zL" secondAttribute="leading" constant="5" id="Fhc-0G-rCP"/>
+                                                        <constraint firstItem="clV-qd-T3D" firstAttribute="top" secondItem="CO0-EL-3zL" secondAttribute="top" constant="5" id="bbI-UF-tza"/>
+                                                        <constraint firstItem="clV-qd-T3D" firstAttribute="centerX" secondItem="CO0-EL-3zL" secondAttribute="centerX" constant="5" id="uLN-CC-IBo"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -107,7 +107,7 @@
                                             <constraint firstAttribute="trailing" secondItem="CO0-EL-3zL" secondAttribute="trailing" id="LRl-Yt-1Ae"/>
                                             <constraint firstItem="CO0-EL-3zL" firstAttribute="leading" secondItem="VxP-cs-VjZ" secondAttribute="leading" id="eym-hl-pXV"/>
                                         </constraints>
-                                        <size key="customSize" width="369" height="153"/>
+                                        <size key="customSize" width="369" height="137"/>
                                         <connections>
                                             <outlet property="colorLbl" destination="uNs-d1-it2" id="h2g-6f-vtK"/>
                                             <outlet property="companyLbl" destination="4yG-Xn-OUJ" id="PKQ-wJ-D80"/>
@@ -122,7 +122,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="tKB-9z-3Ay"/>
                                 </connections>
                             </collectionView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tesla-Roadster-2-2" translatesAutoresizingMaskIntoConstraints="NO" id="vEw-yP-trt">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="vEw-yP-trt">
                                 <rect key="frame" x="0.0" y="64" width="375" height="225"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="225" id="osu-mG-Qlk"/>
@@ -165,7 +165,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="OYc-nM-qQp">
                                 <rect key="frame" x="16" y="76" width="343" height="457"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tesla-Roadster-2-2" translatesAutoresizingMaskIntoConstraints="NO" id="OdP-KA-Gvf">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="OdP-KA-Gvf">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="267"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Mb3-qh-T4S">
@@ -374,7 +374,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Tesla-Roadster-2-2" width="1400" height="788"/>
+        <image name="3" width="1400" height="788"/>
         <image name="deleteIcon" width="37.5" height="37.5"/>
         <image name="icons8-contacts-32" width="24" height="24"/>
         <image name="icons8-menu-26" width="19.5" height="19.5"/>
