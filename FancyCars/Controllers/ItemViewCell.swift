@@ -18,8 +18,8 @@ class ItemViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        layer.borderWidth = 0.5
-        layer.cornerRadius = 10
+        layer.borderWidth = 0.3
+        layer.cornerRadius = 15
         layer.masksToBounds = true
     }
     
