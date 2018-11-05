@@ -35,14 +35,12 @@ class MainListVC: UIViewController {
         
     }
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         collectionListView.delegate = self
         collectionListView.dataSource = self
+        
         
         carsModels = parseCarModel()
         
@@ -69,7 +67,7 @@ extension MainListVC: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return carsModels?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -90,5 +88,18 @@ extension MainListVC: UICollectionViewDataSource {
     }
     
     
+}
+
+extension MainListVC: UICollectionViewDelegateFlowLayout {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        carImage.clipsToBounds = true
+        collectionListView.contentInset = UIEdgeInsets(top: 234, left: 0, bottom: 0, right: 0)
+        let currentValueWhenScrolling = 234 - (scrollView.contentOffset.y + 234)
+        let maxImaageHeight = max(60, currentValueWhenScrolling)
+        print(maxImaageHeight)
+        let desiredImageRect = CGRect(x: 0, y: 0, width: view.bounds.width, height: maxImaageHeight)
+        carImage.frame = desiredImageRect
+    }
 }
 
