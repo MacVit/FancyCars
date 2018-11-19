@@ -56,13 +56,6 @@ class MainListVC: UIViewController {
         
         self.setNeedsStatusBarAppearanceUpdate()
         
-        // Gesture
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTab(_:)))
-        tapGestureRecognizer.numberOfTapsRequired = 1
-        carImage.isUserInteractionEnabled = true
-        carImage.addGestureRecognizer(tapGestureRecognizer)
-//        tapGestureRecognizer.delegate = self
-        
     }
 
     
@@ -150,7 +143,6 @@ extension MainListVC: UICollectionViewDelegateFlowLayout {
                 return .lightContent
             }
 
-            
         } else {
             navigationController?.setNavigationBarHidden(false, animated: true)
         }
