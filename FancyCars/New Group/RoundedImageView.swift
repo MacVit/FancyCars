@@ -15,7 +15,6 @@ class RoundedImageView: UIImageView {
         super.awakeFromNib()
         
         // Навіщо тут layoutIfNeeded()?
-        layoutIfNeeded()
         
         layer.cornerRadius = 15
         layer.masksToBounds = true

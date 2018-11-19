@@ -68,6 +68,10 @@
 			isa = PBXGroup;
 			children = (
 				E1A82133216B94440087E04E /* FancyCars */,
+				E1A8214B216BA4ED0087E04E /* Supporting Files */,
+				E1A82138216B94440087E04E /* Main.storyboard */,
+				E1A8213D216B94450087E04E /* LaunchScreen.storyboard */,
+				E1A8213B216B94450087E04E /* Assets.xcassets */,
 				E1A82132216B94440087E04E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,11 +89,7 @@
 			children = (
 				E1444830216BA89F0054610C /* Views */,
 				E1A8214A216BA4D60087E04E /* Controllers */,
-				E1A82138216B94440087E04E /* Main.storyboard */,
-				E1A8213B216B94450087E04E /* Assets.xcassets */,
 				11DBC18C21A2DF7D00ADD31F /* Protocols */,
-				E1A8213D216B94450087E04E /* LaunchScreen.storyboard */,
-				E1A8214B216BA4ED0087E04E /* Supporting Files */,
 				E1E12E38216CE43F00D85B72 /* Model */,
 			);
 			path = FancyCars;

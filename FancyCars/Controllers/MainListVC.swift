@@ -8,65 +8,50 @@
 
 import UIKit
 
-// 1. Структуризувати написання коду
-// 2. Структуризувати файли
-// 3. Створити LocalDataManager та перенести логіку витягування інформацію про машини на нього.
-// 4. Пофіксити тап картинці в хедері
+// 1. Структуризувати написання коду +
+// 2. Структуризувати файли +
+// 3. Створити LocalDataManager та перенести логіку витягування інформацію про машини на нього. +
+// 4. Пофіксити тап картинці в хедері +
 // 5. Доробити DetailsListVC
 
 class MainListVC: UIViewController {
     
-    @IBOutlet weak var cnstrCarImageHeight: NSLayoutConstraint!
     typealias CarsModelDescription = [CarModelDescription]
-    
     private let toDetailIdentifier: String = "toDetail"
-    
     var carsModels: CarsModelDescription?
     
+    @IBOutlet weak var cnstrCarImageHeight: NSLayoutConstraint!
     @IBOutlet weak var carImage: UIImageView!
     @IBOutlet weak var collectionListView: UICollectionView!
     
-    
     func parseCarModel() -> CarsModelDescription? {
-        let url: URL = Bundle.main.url(forResource: "data", withExtension: "plist")!
-        do {
-            let data = try Data(contentsOf: url)
-            let decoder = PropertyListDecoder()
-            let result = try decoder.decode(CarsModelDescription.self, from: data)
-            
-            return result.shuffled()
-        } catch {
-            print(error.localizedDescription)
-            return nil
-        }
-        
+        return LocalDataManager.extractObjectFrom(plist: "data", of: CarsModelDescription.self)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Setting up the delegates
         collectionListView.delegate = self
         collectionListView.dataSource = self
         
-        
-        carsModels = parseCarModel()
-        
+        // Content configuring
         collectionListView.contentInset.top = cnstrCarImageHeight.constant
         collectionListView.scrollIndicatorInsets.top = collectionListView.contentInset.top
         
-        self.setNeedsStatusBarAppearanceUpdate()
-        
+        // Setting up cars model
+        carsModels = parseCarModel()
     }
-
-    
 }
 
 // MARK: - Gesture Recognizer Section
-
 extension MainListVC: UIGestureRecognizerDelegate {
+    
     @objc func didTab(_ recognizer: UITapGestureRecognizer) {
+        
         if recognizer.state == .ended {
             let tapLocation = recognizer.location(in: self.collectionListView)
+            
             if let tapIndexPath = self.collectionListView.indexPathForItem(at: tapLocation) {
                 
                 if let modelImage = carsModels?[tapIndexPath.item] {
@@ -77,19 +62,15 @@ extension MainListVC: UIGestureRecognizerDelegate {
                     }, completion: nil)
                 }
             }
-            
         }
     }
-    
-    
 }
 
 extension MainListVC: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        <#code#>
     }
-    
 }
 
 extension MainListVC: UICollectionViewDataSource {
@@ -113,40 +94,26 @@ extension MainListVC: UICollectionViewDataSource {
         cell.imageOfTheCar.isUserInteractionEnabled = true
         cell.imageOfTheCar.addGestureRecognizer(tapRecognizer)
         
-        
         if let model = carsModels?[index] {
+            
             cell.companyLbl.text = model.company
             cell.modelLbl.text = model.model
             cell.colorLbl.text = model.color
             cell.yearLbl.text = model.year
             cell.imageOfTheCar.image = UIImage.init(imageLiteralResourceName: model.id)
-            
         }
 
         return cell
     }
-    
-    
 }
 
 extension MainListVC: UICollectionViewDelegateFlowLayout {
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         // Resizing Image when scrolling
         let reverceOffsetY = -(view.safeAreaInsets.top + scrollView.contentOffset.y)
         cnstrCarImageHeight.constant = max(reverceOffsetY, 80)
-        
-        // Hiding Nav Bar when scrolling
-        if scrollView.panGestureRecognizer.translation(in: scrollView).y < 0 {
-            navigationController?.setNavigationBarHidden(true, animated: true)
-            var preferredStatusBarStyle: UIStatusBarStyle {
-                return .lightContent
-            }
-
-        } else {
-            navigationController?.setNavigationBarHidden(false, animated: true)
-        }
-        
     }
 }
 
