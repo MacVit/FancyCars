@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T88-3z-ICr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T88-3z-ICr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dAZ-Da-adk">
-                                <rect key="frame" x="0.0" y="298" width="375" height="320"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jTv-H2-Qyd">
                                     <size key="itemSize" width="369" height="137"/>
@@ -40,7 +40,7 @@
                                                         <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="clV-qd-T3D">
                                                             <rect key="frame" x="5" y="5" width="369" height="127"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="hpK-eN-3XB" customClass="RoundedImageView" customModule="FancyCars" customModuleProvider="target">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="hpK-eN-3XB" customClass="RoundedImageView" customModule="FancyCars" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="0.0" width="179.5" height="127"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -122,22 +122,22 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="tKB-9z-3Ay"/>
                                 </connections>
                             </collectionView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="vEw-yP-trt">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="vEw-yP-trt">
                                 <rect key="frame" x="0.0" y="64" width="375" height="225"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="225" id="osu-mG-Qlk"/>
+                                    <constraint firstAttribute="height" constant="225" id="R9j-e4-cmS"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vEw-yP-trt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8vx-86-wsb"/>
+                            <constraint firstItem="dAZ-Da-adk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="C4Y-jf-uQU"/>
                             <constraint firstItem="vEw-yP-trt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Dte-eg-1xw"/>
                             <constraint firstItem="dAZ-Da-adk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Oau-4j-Urd"/>
-                            <constraint firstItem="dAZ-Da-adk" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="PJk-cO-1PO"/>
                             <constraint firstItem="vEw-yP-trt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bsA-nc-tlb"/>
                             <constraint firstItem="dAZ-Da-adk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dxh-gV-k4C"/>
-                            <constraint firstItem="dAZ-Da-adk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="234" id="uvf-AZ-f5x"/>
+                            <constraint firstAttribute="bottom" secondItem="dAZ-Da-adk" secondAttribute="bottom" id="rRb-TP-P2O"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -147,6 +147,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="carImage" destination="vEw-yP-trt" id="dig-0G-bqT"/>
+                        <outlet property="cnstrCarImageHeight" destination="R9j-e4-cmS" id="nxG-cv-hU4"/>
                         <outlet property="collectionListView" destination="dAZ-Da-adk" id="RNr-aa-4DB"/>
                     </connections>
                 </viewController>

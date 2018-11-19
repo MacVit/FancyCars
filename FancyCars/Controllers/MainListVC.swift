@@ -10,6 +10,7 @@ import UIKit
 
 class MainListVC: UIViewController {
     
+    @IBOutlet weak var cnstrCarImageHeight: NSLayoutConstraint!
     typealias CarsModelDescription = [CarModelDescription]
     
     private let toDetailIdentifier: String = "toDetail"
@@ -44,18 +45,50 @@ class MainListVC: UIViewController {
         
         carsModels = parseCarModel()
         
+        collectionListView.contentInset.top = cnstrCarImageHeight.constant
+        collectionListView.scrollIndicatorInsets.top = collectionListView.contentInset.top
+        
+        self.setNeedsStatusBarAppearanceUpdate()
+        
+        // Gesture
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTab(_:)))
+        tapGestureRecognizer.numberOfTapsRequired = 1
+        carImage.isUserInteractionEnabled = true
+        carImage.addGestureRecognizer(tapGestureRecognizer)
+//        tapGestureRecognizer.delegate = self
+        
     }
+
+    
+}
+
+// MARK: - Gesture Recognizer Section
+
+extension MainListVC: UIGestureRecognizerDelegate {
+    @objc func didTab(_ recognizer: UITapGestureRecognizer) {
+        if recognizer.state == .ended {
+            let tapLocation = recognizer.location(in: self.collectionListView)
+            if let tapIndexPath = self.collectionListView.indexPathForItem(at: tapLocation) {
+                
+                if let modelImage = carsModels?[tapIndexPath.item] {
+                    
+                    UIView.transition(with: carImage, duration: 1, options: .transitionCrossDissolve, animations: {
+                        self.carImage.image = UIImage.init(imageLiteralResourceName: modelImage.id)
+                        self.carImage.clipsToBounds = true
+                    }, completion: nil)
+                }
+            }
+            
+        }
+    }
+    
+    
 }
 
 extension MainListVC: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let modelImage = carsModels?[indexPath.item] {
-            
-            UIView.transition(with: carImage, duration: 1, options: .transitionCrossDissolve, animations: {
-                self.carImage.image = UIImage.init(imageLiteralResourceName: modelImage.id)
-            }, completion: nil)
-        }
+        
     }
     
 }
@@ -75,15 +108,22 @@ extension MainListVC: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: toDetailIdentifier, for: indexPath) as! ItemViewCell
         let index: Int = indexPath.item
         
+        // Gesture
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTab(_:)))
+        tapRecognizer.numberOfTapsRequired = 1
+        cell.imageOfTheCar.isUserInteractionEnabled = true
+        cell.imageOfTheCar.addGestureRecognizer(tapRecognizer)
+        
+        
         if let model = carsModels?[index] {
             cell.companyLbl.text = model.company
             cell.modelLbl.text = model.model
             cell.colorLbl.text = model.color
             cell.yearLbl.text = model.year
             cell.imageOfTheCar.image = UIImage.init(imageLiteralResourceName: model.id)
+            
         }
 
-        
         return cell
     }
     
@@ -93,13 +133,22 @@ extension MainListVC: UICollectionViewDataSource {
 extension MainListVC: UICollectionViewDelegateFlowLayout {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        carImage.clipsToBounds = true
-        collectionListView.contentInset = UIEdgeInsets(top: 234, left: 0, bottom: 0, right: 0)
-        let currentValueWhenScrolling = 234 - (scrollView.contentOffset.y + 234)
-        let maxImaageHeight = max(60, currentValueWhenScrolling)
-        print(maxImaageHeight)
-        let desiredImageRect = CGRect(x: 0, y: 0, width: view.bounds.width, height: maxImaageHeight)
-        carImage.frame = desiredImageRect
+        // Resizing Image when scrolling
+        let reverceOffsetY = -(view.safeAreaInsets.top + scrollView.contentOffset.y)
+        cnstrCarImageHeight.constant = max(reverceOffsetY, 80)
+        
+        // Hiding Nav Bar when scrolling
+        if scrollView.panGestureRecognizer.translation(in: scrollView).y < 0 {
+            navigationController?.setNavigationBarHidden(true, animated: true)
+            var preferredStatusBarStyle: UIStatusBarStyle {
+                return .lightContent
+            }
+
+            
+        } else {
+            navigationController?.setNavigationBarHidden(false, animated: true)
+        }
+        
     }
 }
 
