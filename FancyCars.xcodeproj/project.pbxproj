@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11DBC18E21A2DF9600ADD31F /* LocalDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DBC18D21A2DF9600ADD31F /* LocalDataManagerProtocol.swift */; };
 		E144482F216BA8940054610C /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E144482E216BA8940054610C /* RoundedImageView.swift */; };
 		E1A82135216B94440087E04E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A82134216B94440087E04E /* AppDelegate.swift */; };
 		E1A82137216B94440087E04E /* MainListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A82136216B94440087E04E /* MainListVC.swift */; };
@@ -15,12 +16,12 @@
 		E1A8213F216B94450087E04E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1A8213D216B94450087E04E /* LaunchScreen.storyboard */; };
 		E1A82149216B9E410087E04E /* DetailListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A82148216B9E410087E04E /* DetailListVC.swift */; };
 		E1AE8911216CBD34008E3D18 /* ItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AE8910216CBD34008E3D18 /* ItemViewCell.swift */; };
-		E1BF7F20216E30B600498A87 /* Shadow+RoundedCorners Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF7F1F216E30B600498A87 /* Shadow+RoundedCorners Extension.swift */; };
 		E1BF7F23216E4C7A00498A87 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1BF7F22216E4C7A00498A87 /* data.plist */; };
 		E1E12E37216CE39300D85B72 /* CarModelDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E12E36216CE39300D85B72 /* CarModelDescription.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11DBC18D21A2DF9600ADD31F /* LocalDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManagerProtocol.swift; sourceTree = "<group>"; };
 		E144482E216BA8940054610C /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		E1A82131216B94440087E04E /* FancyCars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FancyCars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A82134216B94440087E04E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -31,7 +32,6 @@
 		E1A82140216B94450087E04E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1A82148216B9E410087E04E /* DetailListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListVC.swift; sourceTree = "<group>"; };
 		E1AE8910216CBD34008E3D18 /* ItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewCell.swift; sourceTree = "<group>"; };
-		E1BF7F1F216E30B600498A87 /* Shadow+RoundedCorners Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shadow+RoundedCorners Extension.swift"; sourceTree = "<group>"; };
 		E1BF7F22216E4C7A00498A87 /* data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		E1E12E36216CE39300D85B72 /* CarModelDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModelDescription.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,11 +47,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11DBC18C21A2DF7D00ADD31F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				11DBC18D21A2DF9600ADD31F /* LocalDataManagerProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		E1444830216BA89F0054610C /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				E144482E216BA8940054610C /* RoundedImageView.swift */,
-				E1BF7F21216E30E300498A87 /* UI Extension */,
 			);
 			name = Views;
 			path = "New Group";
@@ -80,6 +87,7 @@
 				E1A8214A216BA4D60087E04E /* Controllers */,
 				E1A82138216B94440087E04E /* Main.storyboard */,
 				E1A8213B216B94450087E04E /* Assets.xcassets */,
+				11DBC18C21A2DF7D00ADD31F /* Protocols */,
 				E1A8213D216B94450087E04E /* LaunchScreen.storyboard */,
 				E1A8214B216BA4ED0087E04E /* Supporting Files */,
 				E1E12E38216CE43F00D85B72 /* Model */,
@@ -105,14 +113,6 @@
 				E1A82140216B94450087E04E /* Info.plist */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E1BF7F21216E30E300498A87 /* UI Extension */ = {
-			isa = PBXGroup;
-			children = (
-				E1BF7F1F216E30B600498A87 /* Shadow+RoundedCorners Extension.swift */,
-			);
-			path = "UI Extension";
 			sourceTree = "<group>";
 		};
 		E1E12E38216CE43F00D85B72 /* Model */ = {
@@ -196,7 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1AE8911216CBD34008E3D18 /* ItemViewCell.swift in Sources */,
-				E1BF7F20216E30B600498A87 /* Shadow+RoundedCorners Extension.swift in Sources */,
+				11DBC18E21A2DF9600ADD31F /* LocalDataManagerProtocol.swift in Sources */,
 				E144482F216BA8940054610C /* RoundedImageView.swift in Sources */,
 				E1E12E37216CE39300D85B72 /* CarModelDescription.swift in Sources */,
 				E1A82137216B94440087E04E /* MainListVC.swift in Sources */,

@@ -8,6 +8,12 @@
 
 import UIKit
 
+// 1. Структуризувати написання коду
+// 2. Структуризувати файли
+// 3. Створити LocalDataManager та перенести логіку витягування інформацію про машини на нього.
+// 4. Пофіксити тап картинці в хедері
+// 5. Доробити DetailsListVC
+
 class MainListVC: UIViewController {
     
     @IBOutlet weak var cnstrCarImageHeight: NSLayoutConstraint!

@@ -13,10 +13,12 @@ class RoundedImageView: UIImageView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        // Навіщо тут layoutIfNeeded()?
         layoutIfNeeded()
+        
         layer.cornerRadius = 15
         layer.masksToBounds = true
-
     }
 
 //    @IBInspectable var cornerRadius: CGFloat {
