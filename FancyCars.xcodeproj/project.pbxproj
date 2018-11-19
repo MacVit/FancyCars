@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		11DBC18E21A2DF9600ADD31F /* LocalDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DBC18D21A2DF9600ADD31F /* LocalDataManagerProtocol.swift */; };
+		E11F504721A2FD970068368C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E11F504621A2FD970068368C /* Default-568h@2x.png */; };
 		E144482F216BA8940054610C /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E144482E216BA8940054610C /* RoundedImageView.swift */; };
 		E1A82135216B94440087E04E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A82134216B94440087E04E /* AppDelegate.swift */; };
 		E1A82137216B94440087E04E /* MainListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A82136216B94440087E04E /* MainListVC.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		11DBC18D21A2DF9600ADD31F /* LocalDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManagerProtocol.swift; sourceTree = "<group>"; };
+		E11F504621A2FD970068368C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E144482E216BA8940054610C /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		E1A82131216B94440087E04E /* FancyCars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FancyCars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A82134216B94440087E04E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +57,15 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		E11F504521A2FD160068368C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E1AE8910216CBD34008E3D18 /* ItemViewCell.swift */,
+			);
+			name = Cells;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		E1444830216BA89F0054610C /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +78,7 @@
 		E1A82128216B94440087E04E = {
 			isa = PBXGroup;
 			children = (
+				E11F504621A2FD970068368C /* Default-568h@2x.png */,
 				E1A82133216B94440087E04E /* FancyCars */,
 				E1A8214B216BA4ED0087E04E /* Supporting Files */,
 				E1A82138216B94440087E04E /* Main.storyboard */,
@@ -87,10 +99,11 @@
 		E1A82133216B94440087E04E /* FancyCars */ = {
 			isa = PBXGroup;
 			children = (
+				E1E12E38216CE43F00D85B72 /* Model */,
 				E1444830216BA89F0054610C /* Views */,
 				E1A8214A216BA4D60087E04E /* Controllers */,
+				E11F504521A2FD160068368C /* Cells */,
 				11DBC18C21A2DF7D00ADD31F /* Protocols */,
-				E1E12E38216CE43F00D85B72 /* Model */,
 			);
 			path = FancyCars;
 			sourceTree = "<group>";
@@ -100,7 +113,6 @@
 			children = (
 				E1A82136216B94440087E04E /* MainListVC.swift */,
 				E1A82148216B9E410087E04E /* DetailListVC.swift */,
-				E1AE8910216CBD34008E3D18 /* ItemViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -184,6 +196,7 @@
 				E1A8213F216B94450087E04E /* LaunchScreen.storyboard in Resources */,
 				E1A8213C216B94450087E04E /* Assets.xcassets in Resources */,
 				E1BF7F23216E4C7A00498A87 /* data.plist in Resources */,
+				E11F504721A2FD970068368C /* Default-568h@2x.png in Resources */,
 				E1A8213A216B94440087E04E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
