@@ -10,7 +10,7 @@
 		<key>color</key>
 		<string>green</string>
 		<key>model</key>
-		<string>3</string>
+		<string>Model 3</string>
 		<key>id</key>
 		<string>1</string>
 	</dict>
@@ -22,7 +22,7 @@
 		<key>color</key>
 		<string>green</string>
 		<key>model</key>
-		<string>2</string>
+		<string>Model S</string>
 		<key>id</key>
 		<string>2</string>
 	</dict>
@@ -34,7 +34,7 @@
 		<key>color</key>
 		<string>red</string>
 		<key>model</key>
-		<string>roadster 2</string>
+		<string>Roadster 2</string>
 		<key>id</key>
 		<string>3</string>
 	</dict>
@@ -46,7 +46,7 @@
 		<key>color</key>
 		<string>white</string>
 		<key>model</key>
-		<string>r8</string>
+		<string>R8</string>
 		<key>id</key>
 		<string>4</string>
 	</dict>
@@ -70,7 +70,7 @@
 		<key>color</key>
 		<string>blue</string>
 		<key>model</key>
-		<string>aventador</string>
+		<string>Aventador</string>
 		<key>id</key>
 		<string>6</string>
 	</dict>
@@ -82,7 +82,7 @@
 		<key>color</key>
 		<string>blue</string>
 		<key>model</key>
-		<string>chiron</string>
+		<string>Chiron</string>
 		<key>id</key>
 		<string>7</string>
 	</dict>
@@ -94,7 +94,7 @@
 		<key>color</key>
 		<string>black</string>
 		<key>model</key>
-		<string>aveo</string>
+		<string>Aveo</string>
 		<key>id</key>
 		<string>8</string>
 	</dict>
@@ -106,7 +106,7 @@
 		<key>color</key>
 		<string>white</string>
 		<key>model</key>
-		<string>pro evolution 10</string>
+		<string>Pro Evolution 10</string>
 		<key>id</key>
 		<string>9</string>
 	</dict>
@@ -118,7 +118,7 @@
 		<key>color</key>
 		<string>pink</string>
 		<key>model</key>
-		<string>legacy</string>
+		<string>Legacy</string>
 		<key>id</key>
 		<string>10</string>
 	</dict>

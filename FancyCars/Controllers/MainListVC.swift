@@ -8,7 +8,7 @@
 
 import UIKit
 
-// 1. Структуризувати написання коду +
+// 1. Структуризувати написання коду + -
 // 2. Структуризувати файли +
 // 3. Створити LocalDataManager та перенести логіку витягування інформацію про машини на нього. +
 // 4. Пофіксити тап картинці в хедері +
@@ -28,7 +28,7 @@ class MainListVC: UIViewController {
         return LocalDataManager.extractObjectFrom(plist: "data", of: CarsModelDescription.self)
     }
     
-    override func viewDidLoad() {
+        override func viewDidLoad() {
         super.viewDidLoad()
         
         // Setting up the delegates
@@ -42,18 +42,27 @@ class MainListVC: UIViewController {
         // Setting up cars model
         carsModels = parseCarModel()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let indexPath = collectionListView.indexPathsForSelectedItems
+
+//        if segue.identifier == toDetailIdentifier {
+//            if let detailVC = segue.destination as? DetailListVC {
+//                
+//            }
+//        }
+    }
 }
 
 // MARK: - Gesture Recognizer Section
 extension MainListVC: UIGestureRecognizerDelegate {
     
-    @objc func didTab(_ recognizer: UITapGestureRecognizer) {
+    @objc func didTap(_ recognizer: UITapGestureRecognizer) {
         
         if recognizer.state == .ended {
             let tapLocation = recognizer.location(in: self.collectionListView)
             
             if let tapIndexPath = self.collectionListView.indexPathForItem(at: tapLocation) {
-                
                 if let modelImage = carsModels?[tapIndexPath.item] {
                     
                     UIView.transition(with: carImage, duration: 1, options: .transitionCrossDissolve, animations: {
@@ -69,7 +78,19 @@ extension MainListVC: UIGestureRecognizerDelegate {
 extension MainListVC: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        <#code#>
+        
+        if let detailVC = storyboard?.instantiateViewController(withIdentifier: toDetailIdentifier) as? DetailListVC {
+            if let model = carsModels?[indexPath.item] {
+
+                detailVC.companyTextField.text = model.company
+                detailVC.modelTextField.text = model.model
+                detailVC.colorTextField.text = model.color
+                detailVC.yearTextField.text = model.year
+                detailVC.detailICarImg.image = UIImage.init(imageLiteralResourceName: model.id)
+
+                self.navigationController?.pushViewController(detailVC, animated: true)
+            }
+        }
     }
 }
 
@@ -89,7 +110,7 @@ extension MainListVC: UICollectionViewDataSource {
         let index: Int = indexPath.item
         
         // Gesture
-        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTab(_:)))
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTap))
         tapRecognizer.numberOfTapsRequired = 1
         cell.imageOfTheCar.isUserInteractionEnabled = true
         cell.imageOfTheCar.addGestureRecognizer(tapRecognizer)

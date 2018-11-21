@@ -28,15 +28,19 @@ class DetailListVC: UIViewController {
     
     // MARK: - Actions
     @IBAction func shareItem(_ sender: Any) {
-        <#code#>
+        
     }
     
     @IBAction func deleteItem(_ sender: Any) {
-        <#code#>
+        dismiss(animated: true, completion: nil)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        <#code#>
+        
     }
 }

@@ -13,7 +13,8 @@ protocol LocalDataManagerProtocol {
 }
 
 struct LocalDataManager: LocalDataManagerProtocol {
-    static func extractObjectFrom<PlistType>(plist name: String, of type: PlistType.Type) -> PlistType? where PlistType : Decodable {
+    
+    static func extractObjectFrom<PlistType>(plist name: String, of type: PlistType.Type) -> PlistType? where PlistType: Decodable {
         let url: URL = Bundle.main.url(forResource: name, withExtension: "plist")!
         
         do {

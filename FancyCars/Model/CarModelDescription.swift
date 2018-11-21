@@ -9,7 +9,6 @@
 import Foundation
 
 struct CarModelDescription: Decodable {
-    
     var company: String
     var model: String
     var year: String
