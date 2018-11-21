@@ -19,12 +19,14 @@ class ItemViewCell: UICollectionViewCell {
     @IBOutlet weak var colorLbl: UILabel!
     @IBOutlet weak var yearLbl: UILabel!
     
-    // MARK: - View Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        layer.borderWidth = 0.3
         layer.cornerRadius = 15
-        layer.masksToBounds = true
+        layer.masksToBounds = false
+        layer.shadowOpacity = 0.8
+        layer.shadowRadius = 6.0
+        layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        layer.shadowColor = UIColor(red: 157/255, green: 157/255, blue: 157/255, alpha: 0.1).cgColor
     }
 }

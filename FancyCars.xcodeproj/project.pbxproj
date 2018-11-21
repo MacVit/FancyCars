@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		11DBC18E21A2DF9600ADD31F /* LocalDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DBC18D21A2DF9600ADD31F /* LocalDataManagerProtocol.swift */; };
 		E144482F216BA8940054610C /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E144482E216BA8940054610C /* RoundedImageView.swift */; };
+		E153E9B121A56347003ED832 /* RoundedContentVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = E153E9B021A56347003ED832 /* RoundedContentVIew.swift */; };
 		E1A82135216B94440087E04E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A82134216B94440087E04E /* AppDelegate.swift */; };
 		E1A82137216B94440087E04E /* MainListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A82136216B94440087E04E /* MainListVC.swift */; };
 		E1A8213A216B94440087E04E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1A82138216B94440087E04E /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		11DBC18D21A2DF9600ADD31F /* LocalDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManagerProtocol.swift; sourceTree = "<group>"; };
 		E144482E216BA8940054610C /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		E153E9B021A56347003ED832 /* RoundedContentVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedContentVIew.swift; sourceTree = "<group>"; };
 		E1A82131216B94440087E04E /* FancyCars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FancyCars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A82134216B94440087E04E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1A82136216B94440087E04E /* MainListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListVC.swift; sourceTree = "<group>"; tabWidth = 4; };
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				E144482E216BA8940054610C /* RoundedImageView.swift */,
+				E153E9B021A56347003ED832 /* RoundedContentVIew.swift */,
 			);
 			name = Views;
 			path = "New Group";
@@ -206,6 +209,7 @@
 			files = (
 				E1AE8911216CBD34008E3D18 /* ItemViewCell.swift in Sources */,
 				11DBC18E21A2DF9600ADD31F /* LocalDataManagerProtocol.swift in Sources */,
+				E153E9B121A56347003ED832 /* RoundedContentVIew.swift in Sources */,
 				E144482F216BA8940054610C /* RoundedImageView.swift in Sources */,
 				E1E12E37216CE39300D85B72 /* CarModelDescription.swift in Sources */,
 				E1A82137216B94440087E04E /* MainListVC.swift in Sources */,
@@ -358,7 +362,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MH99TMMZ5H;
-				INFOPLIST_FILE = "$(SRCROOT)/FancyCars/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,7 +380,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MH99TMMZ5H;
-				INFOPLIST_FILE = "$(SRCROOT)/FancyCars/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
